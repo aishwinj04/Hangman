@@ -94,6 +94,13 @@ function displayWord() {
             finalMessage.innerText = "You Lost!";
             popup.style.display = 'flex';
 
+            wordEl.innerHTML = `
+            ${selectedWord
+                .split('') 
+                .map(letter => `<span class="letter">${letter}</span>`)
+                .join('')} 
+        `;
+
         }
 
 
